@@ -1,7 +1,7 @@
 {
     "version": 2,
     "projects": {
-      "nx-go": "packages/nx-next-neo4j",
-      "nx-go-e2e": "e2e/nx-next-neo4j"
+      "nx-nest-neo4j": "packages/nx-next-neo4j",
+      "nx-nest-neo4j-e2e": "e2e/nx-next-neo4j"
     }
   }

@@ -2,7 +2,7 @@
   "name": "nx-nest-neo4j",
   "version": "0.9.0",
   "license": "MIT",
-  "description": "Nx generators for NestJS with GraphQL and Neo4J",
+  "description": "Nx generators for NestJS with GraphQL and Neo4J + Stripe",
   "author": {
     "name": "Kristian Mandrup",
     "email": "kmandrup@gmail.com"
