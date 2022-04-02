@@ -1,0 +1,26 @@
+import { JwtModule } from '@nestjs/jwt';
+import { Global, Module } from '@nestjs/common';
+import { configModule, jwtModule, authModule, graphQLModule } from './app';
+import { AuthController } from '@koakh/nestjs-package-jwt-authentication-graphql';
+import { OgmService } from './common/modules/ogm/ogm.service';
+
+@Global()
+@Module({
+  imports: [
+    configModule,
+    jwtModule,
+    authModule,
+    graphQLModule,
+  ],
+  providers: [
+    OgmService,
+  ],
+  exports: [
+    OgmService,
+  ],
+  controllers: [
+    AuthController
+  ],
+})
+
+export class AppModule { }

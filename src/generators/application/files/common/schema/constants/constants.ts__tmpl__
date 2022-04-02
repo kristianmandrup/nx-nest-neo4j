@@ -1,0 +1,10 @@
+type Constants = {
+  graphTypes: { [key: string]: string; };
+}
+
+// neo4j models
+export const constants: Constants = {
+  graphTypes: {
+    USER: 'User',
+  },
+}
