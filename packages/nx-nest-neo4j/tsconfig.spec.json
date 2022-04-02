@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "module": "commonjs",
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*_spec.ts",
+    "**/*_test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    "**/*.spec.js",
+    "**/*.test.js",
+    "**/*.spec.jsx",
+    "**/*.test.jsx",
+    "**/*.d.ts"
+, "src/generators/user/user.service.spec", "src/generators/stripe/files/subscription/subscription.service.spec", "src/generators/stripe/files/checkout/checkout.controller.spec", "src/generators/auth/auth.service.spec", "src/generators/auth/auth.controller.spec", "src/generators/encryption/encryption.service.spec", "src/generators/neo4j/files/neo4j.service.spec", "src/generators/neo4j/files/neo4j-type.interceptor.spec"  ]
+}

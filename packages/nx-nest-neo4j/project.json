@@ -1,0 +1,51 @@
+{
+    "root": "packages/nx-nest-neo4j",
+    "sourceRoot": "packages/nx-nest-neo4j/src",
+    "projectType": "library",
+    "targets": {
+      "lint": {
+        "executor": "@nrwl/linter:eslint",
+        "outputs": ["{options.outputFile}"],
+        "options": {
+          "lintFilePatterns": ["packages/nx-nest-neo4j/**/*.ts"]
+        }
+      },
+      "test": {
+        "executor": "@nrwl/jest:jest",
+        "outputs": ["coverage/packages/nx-nest-neo4j"],
+        "options": {
+          "jestConfig": "packages/nx-nest-neo4j/jest.config.js",
+          "passWithNoTests": true
+        }
+      },
+      "build": {
+        "executor": "@nrwl/node:package",
+        "outputs": ["{options.outputPath}"],
+        "options": {
+          "outputPath": "dist/packages/nx-nest-neo4j",
+          "tsConfig": "packages/nx-nest-neo4j/tsconfig.lib.json",
+          "packageJson": "packages/nx-nest-neo4j/package.json",
+          "main": "packages/nx-nest-neo4j/src/index.ts",
+          "assets": [
+            "packages/nx-nest-neo4j/*.md",
+            {
+              "input": "./packages/nx-nest-neo4j/src",
+              "glob": "**/!(*.ts)",
+              "output": "./src"
+            },
+            {
+              "input": "./packages/nx-nest-neo4j/src",
+              "glob": "**/*.d.ts",
+              "output": "./src"
+            },
+            {
+              "input": "./packages/nx-nest-neo4j",
+              "glob": "generators.json",
+              "output": "."
+            }
+          ]
+        }
+      }
+    },
+    "tags": []
+  }
