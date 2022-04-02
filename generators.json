@@ -1,72 +1,51 @@
 {
   "name": "nx/nest",
   "version": "0.1",
-  "extends": ["@nrwl/workspace"],
-  "schematics": {
-    "application": {
-      "factory": "./src/generators/application/application#applicationSchematic",
-      "schema": "./src/generators/application/schema.json",
-      "aliases": ["app"],
-      "x-type": "application",
-      "description": "Create a NestJS application."
-    },
-    "plan-subscription": {
-      "factory": "./src/generators/plan-subscription/neo4j-resolver#moduleSchematic",
-      "schema": "./src/generators/plan-subscription/schema.json",
-      "description": "Run the `plan-subscription` NestJS generator with Nx project support."
-    },
-    "stripe-checkout": {
-      "factory": "./src/generators/stripe-checkout/stripe-checkout#moduleSchematic",
-      "schema": "./src/generators/stripe-checkout/schema.json",
-      "description": "Run the `stripe-checkout` NestJS generator with Nx project support."
-    },
-    "resolver": {
-      "factory": "./src/generators/neo4j-resolver/neo4j-resolver#resolverSchematic",
-      "schema": "./src/generators/neo4j-resolver/schema.json",
-      "description": "Run the `neo4j-resolver` NestJS generator with Nx project support."
-    },
-    "user": {
-      "factory": "./src/generators/user/user#moduleSchematic",
-      "schema": "./src/generators/user/schema.json",
-      "description": "Run the `user` NestJS generator with Nx project support."
-    }
-  },
+  "extends": ["@nrwl/workspace"],  
   "generators": {
     "application": {
       "factory": "./src/generators/application/application",
       "schema": "./src/generators/application/schema.json",
       "aliases": ["app"],
       "x-type": "application",
-      "description": "Create a NestJS application."
+      "description": "Create a NestJS Neo4J application."
     },
     "init": {
       "factory": "./src/generators/init/init",
       "schema": "./src/generators/init/schema.json",
-      "description": "Initialize the `@nrwl/nest` plugin.",
+      "description": "Initialize the NestJS Neo4J application",
       "aliases": ["ng-add"],
       "hidden": true
     },
-    "library": {
-      "factory": "./src/generators/library/library",
-      "schema": "./src/generators/library/schema.json",
-      "aliases": ["lib"],
-      "x-type": "library",
-      "description": "Create a new NestJS library."
+    "auth": {
+      "factory": "./src/generators/auth/generate",
+      "schema": "./src/generators/auth/schema.json",      
+      "description": "Generate an Authentication resource."
     },
-    "module": {
-      "factory": "./src/generators/module/module",
-      "schema": "./src/generators/module/schema.json",
-      "description": "Run the `module` NestJS generator with Nx project support."
+    "encryption": {
+      "factory": "./src/generators/encryption/generate",
+      "schema": "./src/generators/encryption/schema.json",
+      "description": "Generate an Encryption resource."
     },
-    "resolver": {
-      "factory": "./src/generators/resolver/resolver",
-      "schema": "./src/generators/resolver/schema.json",
-      "description": "Run the `resolver` NestJS generator with Nx project support."
+    "stripe": {
+      "factory": "./src/generators/stripe/generate",
+      "schema": "./src/generators/stripe/schema.json",
+      "description": "Generate a Stripe subscription/checkout resource."
     },
-    "service": {
-      "factory": "./src/generators/service/service",
-      "schema": "./src/generators/service/schema.json",
-      "description": "Run the `service` NestJS generator with Nx project support."
+    "neo4j": {
+      "factory": "./src/generators/neo4j/generate",
+      "schema": "./src/generators/neo4j/schema.json",
+      "description": "Generate a Neo4J subscription/checkout resource."
+    },
+    "resource": {
+      "factory": "./src/generators/resource/generate",
+      "schema": "./src/generators/resource/schema.json",
+      "description": "Generate a Neo4J Resource"
+    },
+    "user": {
+      "factory": "./src/generators/user/generate",
+      "schema": "./src/generators/user/schema.json",
+      "description": "Generate a Neo4J User resource"
     }
   }
 }

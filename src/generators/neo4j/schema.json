@@ -1,21 +1,21 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "NxNestUserGenerator",
-  "title": "Nx NestJS User Options Schema",
-  "description": "Nx NestJS User Options Schema",
+  "$id": "NxNestNeo4JGenerator",
+  "title": "Nx NestJS Neo4J Options Schema",
+  "description": "Nx NestJS Neo4J Options Schema",
   "cli": "nx",
   "type": "object",
   "properties": {
     "name": {
       "description": "The name of the resource.",
       "type": "string",
-      "default": "user",
+      "default": "neo4j",
       "x-prompt": "What name would you like to use for the resource?"
     },
     "directory": {
       "description": "The directory of the resource.",
       "type": "string",
-      "default": "user"      
+      "default": "neo4j"      
     }
   },
   "additionalProperties": false,

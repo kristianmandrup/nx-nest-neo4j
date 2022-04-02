@@ -1,0 +1,12 @@
+import { Module } from '@nestjs/common';
+import { PlanController } from './plan.controller.ts__tmpl__';
+import { PlanService } from './plan.service.ts__tmpl__';
+import { SubscriptionService } from './subscription.service.ts__tmpl__';
+
+@Module({
+  providers: [SubscriptionService, PlanService],
+  exports: [SubscriptionService, PlanService,],
+  controllers: [PlanController],
+
+})
+export class SubscriptionModule {}

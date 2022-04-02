@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "jest": "27.2.3",
+    "@nrwl/workspace": "*",
+    "@nrwl/angular": "*", 
     "@nrwl/devkit": "*",
     "@nrwl/linter": "*",
     "@nrwl/node": "*",

@@ -17,5 +17,5 @@
     "**/*.spec.jsx",
     "**/*.test.jsx",
     "**/*.d.ts"
-  ]
+, "src/generators/user/user.service.spec.ts__tmpl__", "src/generators/stripe/files/subscription/subscription.service.spec.ts__tmpl__", "src/generators/stripe/files/checkout/checkout.controller.spec.ts__tmpl__", "src/generators/auth/auth.service.spec.ts__tmpl__", "src/generators/auth/auth.controller.spec.ts__tmpl__", "src/generators/encryption/encryption.service.spec.ts__tmpl__", "src/generators/neo4j/files/neo4j.service.spec.ts__tmpl__", "src/generators/neo4j/files/neo4j-type.interceptor.spec.ts__tmpl__"  ]
 }
