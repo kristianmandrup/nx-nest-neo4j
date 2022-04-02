@@ -1,7 +1,7 @@
 import { AuthModule } from '@koakh/nestjs-package-jwt-authentication-graphql';
 import { ConfigService } from '@nestjs/config';
-import { AppModule } from '../../../port/app.module';
-import { constants as userConstants, UserModule, UserService } from '../domains/user';
+import { AppModule } from '../app.module';
+// import { constants as userConstants, UserModule, UserService } from '../domains/user';
 
 export const authModule = AuthModule.registerAsync({
     imports: [AppModule, UserModule],
@@ -12,6 +12,6 @@ export const authModule = AuthModule.registerAsync({
       refreshTokenJwtSecret: configService.get<string>('refreshTokenJwtSecret'),
       refreshTokenExpiresIn: configService.get<string>('refreshTokenExpiresIn'),
       adminUserPayload: userConstants.adminCurrentUser,
-      userService,
+      // userService,
     }),
   })
