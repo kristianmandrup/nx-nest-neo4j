@@ -23,7 +23,8 @@ export const graphQLModule = GraphQLModule.forRootAsync({
       // this enable code first
       // autoSchemaFile: 'schema.gql',
       // this enable neo4j schema first
-      schema: neoSchema.schema,
+      // use neoSchema.schema for @nestjs/graphql version < 3
+      schema: await neoSchema.getSchema(),
       cors: {
         origin: configService.get<string>('corsOriginReactFrontend'),
         credentials: true,

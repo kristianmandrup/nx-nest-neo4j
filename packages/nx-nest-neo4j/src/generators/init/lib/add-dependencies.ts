@@ -51,6 +51,7 @@ export function addDependencies(tree: Tree): GeneratorCallback {
       'jsonwebtoken': '*',
       'bcrypt': '*',
       'uuid': '*',
+      '@neo4j/graphql': '*',
       '@neo4j/graphql-ogm': '*',
       'apollo-server-plugin-base': '*',
       '@koakh/nestjs-package-jwt-authentication-graphql': '*',
