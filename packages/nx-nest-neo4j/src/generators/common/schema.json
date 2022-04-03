@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NxNestEncryptionGenerator",
+  "title": "Nx NestJS Encryption Options Schema",
+  "description": "Nx NestJS Encryption Options Schema",
+  "cli": "nx",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the resource.",
+      "type": "string",
+      "default": "encryption",
+      "x-prompt": "What name would you like to use for the resource?"
+    },
+    "directory": {
+      "description": "The directory of the resource.",
+      "type": "string",
+      "default": "encryption"      
+    }
+  },
+  "additionalProperties": false,
+  "required": []
+}

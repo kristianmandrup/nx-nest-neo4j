@@ -27,6 +27,11 @@
       "schema": "./src/generators/encryption/schema.json",
       "description": "Generate an Encryption resource."
     },
+    "common": {
+      "factory": "./src/generators/common/generate",
+      "schema": "./src/generators/common/schema.json",      
+      "description": "Generate a Common library resource."
+    },
     "stripe": {
       "factory": "./src/generators/stripe/generate",
       "schema": "./src/generators/stripe/schema.json",
